@@ -1,0 +1,9 @@
+2018-12-28 08:04:25,034 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120019} closed
+2018-12-28 08:04:25,034 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120015} closed
+2018-12-28 08:04:25,034 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} closed
+2018-12-28 08:04:25,035 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} closed
+2018-12-28 08:04:25,035 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120018} closed
+2018-12-28 08:04:25,037 [Thread-7] DEBUG [druid.sql.Connection] - {conn-110004} closed
+2018-12-28 08:04:25,037 [Thread-7] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-2} closed
+2018-12-28 08:04:25,042 [Thread-7] DEBUG [druid.sql.Connection] - {conn-10001} closed
+2018-12-28 08:04:25,043 [Thread-7] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed

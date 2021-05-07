@@ -1,0 +1,7 @@
+2018-11-26 10:11:21,975 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110007} pool-connect
+2018-11-26 10:11:21,976 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110007, pstmt-120029} Parameters : [e26aacce-0cc6-4325-b892-cddcaee1f13b]
+2018-11-26 10:11:21,976 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110007, pstmt-120029} Types : [VARCHAR]
+2018-11-26 10:11:21,978 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110007, pstmt-120029} executed. 1.777 millis. select * from org_news where flag='0' and id=?
+2018-11-26 10:11:21,979 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110007, pstmt-120029} clearParameters. 
+2018-11-26 10:11:21,979 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110007} commited
+2018-11-26 10:11:21,979 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110007} pool-recycle

@@ -1,0 +1,12 @@
+2018-06-26 16:29:39,933 [Thread-8] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120012} closed
+2018-06-26 16:29:39,935 [Thread-8] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120013} closed
+2018-06-26 16:29:39,935 [Thread-8] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120014} closed
+2018-06-26 16:29:39,935 [Thread-8] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120015} closed
+2018-06-26 16:29:39,948 [Thread-8] DEBUG [druid.sql.Connection] - {conn-110004} closed
+2018-06-26 16:29:39,950 [Thread-8] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-2} closed
+2018-06-26 16:29:39,952 [Thread-8] DEBUG [druid.sql.Statement] - {conn-10001, pstmt-20000} closed
+2018-06-26 16:29:39,953 [Thread-8] DEBUG [druid.sql.Statement] - {conn-10001, pstmt-20001} closed
+2018-06-26 16:29:39,953 [Thread-8] DEBUG [druid.sql.Statement] - {conn-10001, pstmt-20002} closed
+2018-06-26 16:29:39,953 [Thread-8] DEBUG [druid.sql.Statement] - {conn-10001, pstmt-20003} closed
+2018-06-26 16:29:39,971 [Thread-8] DEBUG [druid.sql.Connection] - {conn-10001} closed
+2018-06-26 16:29:39,971 [Thread-8] INFO  [com.alibaba.druid.pool.DruidDataSource] - {dataSource-1} closed

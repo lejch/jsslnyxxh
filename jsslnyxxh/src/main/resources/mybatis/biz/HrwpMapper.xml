@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jsslnyxxh.app.repository.biz.HpReqWithPermitDao">
+    <resultMap id="membereg" type="java.util.HashMap">  
+        <result property="ID" column="ID" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="NAME" column="NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="SEX" column="SEX" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="BIRTH" column="BIRTH" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="JG" column="JG" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="MZ" column="MZ" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="DP" column="DP" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="SFZ" column="SFZ" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="GZDH" column="GZDH" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="PHONE" column="PHONE" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="EMAIL" column="EMAIL" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="YZBM" column="YZBM" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="LXDZ" column="LXDZ" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="ZHBYYX" column="ZHBYYX" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="SXZY" column="SXZY" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="XL" column="XL" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CSZY" column="CSZY" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="GZDW" column="GZDW" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="KS" column="KS" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="DWZW" column="DWZW" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="JSZC" column="JSZC" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="ISRDZX" column="ISRDZX" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="JL" column="JL" jdbcType="CLOB" javaType="java.lang.String" />
+		<result property="CREATETIME" column="CREATETIME" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="FLAG" column="FLAG" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="sqlx" column="sqlx" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="HY_ID" column="HY_ID" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="FIRST_CREATETIME" column="FIRST_CREATETIME" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="HYSH_ERR_REASON" column="HYSH_ERR_REASON" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="LSSH_ERR_REASON" column="LSSH_ERR_REASON" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="HY_ID" column="HY_ID" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </resultMap>
+    
+    <resultMap id="groupreg" type="java.util.HashMap">  
+        <result property="ID" column="ID" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="DWMC" column="DWMC" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CLRQ" column="CLRQ" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="ZCZB" column="ZCZB" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="ZGRS" column="ZGRS" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="XXDZ" column="XXDZ" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="HYSL" column="HYSL" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="DWWZ" column="DWWZ" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CZ" column="CZ" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="FZJGSL" column="FZJGSL" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="YZBM" column="YZBM" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="FRXM" column="FRXM" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="DH" column="DH" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="SEX" column="SEX" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="PHONE" column="PHONE" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="ZWZC" column="ZWZC" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="EMAIL" column="EMAIL" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="LXR" column="LXR" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="LXRDH" column="LXRDH" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="LXRSJ" column="LXRSJ" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="JL" column="JL" jdbcType="CLOB" javaType="java.lang.String" />
+		<result property="CREATETIME" column="CREATETIME" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="FLAG" column="FLAG" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="sqlx" column="sqlx" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="HY_ID" column="HY_ID" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="TTSH_ERR_REASON" column="TTSH_ERR_REASON" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </resultMap>
+    
+    <resultMap id="companyreg" type="java.util.HashMap">
+        <result property="ID" column="ID" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CPY_NAME_CN" column="CPY_NAME_CN" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CPY_NAME_EN" column="CPY_NAME_EN" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CPY_CREATE_TIME" column="CPY_CREATE_TIME" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CPY_GSZCH" column="CPY_GSZCH" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CPY_TYPE" column="CPY_TYPE" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CPY_TYPE_OTHER" column="CPY_TYPE_OTHER" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CPY_BELONG" column="CPY_BELONG" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CPY_BELONG_OTHER" column="CPY_BELONG_OTHER" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CPY_ADDR" column="CPY_ADDR" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CPY_UB" column="CPY_UB" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="FR_NAME" column="FR_NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="FR_ZW" column="FR_ZW" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="FR_BGDH" column="FR_BGDH" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="FR_PHONE" column="FR_PHONE" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="LXR_NAME" column="LXR_NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="LXR_ZW" column="LXR_ZW" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="LXR_BGDH" column="LXR_BGDH" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="LXR_PHONE" column="LXR_PHONE" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="LXR_EMAIL" column="LXR_EMAIL" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="JL" column="JL" jdbcType="CLOB" javaType="java.lang.String" />
+		<result property="CREATETIME" column="CREATETIME" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="FLAG" column="FLAG" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="INITREGSUC" column="INITREGSUC" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="HAS_OPERATE" column="HAS_OPERATE" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="HY_ID" column="HY_ID" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="QYSH_ERR_REASON" column="QYSH_ERR_REASON" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="sqlx" column="sqlx" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </resultMap>
+    
+    <insert id="insertCouncilRecord" parameterType="map">
+        insert into COUNCIL_REC(ID,ORG_MBR_ID,CREATETIME,FLAG,USERID,USERALIAS) 
+        values (#{ID},#{ORG_MBR_ID},to_char(sysdate,'yyyy-MM-dd HH24:mi:ss'),'1',#{USERID},#{USERALIAS})
+    </insert>
+    
+    <update id="updateCouncilReg" parameterType="map">
+        update org_membereg set COUNCIL_FLAG='1',
+        						HAS_CLI_RECORD='0',
+        						CREATETIME=to_char(sysdate,'yyyy-MM-dd HH24:mi:ss'),
+        						CUR_LISHI_ID=#{ID}  
+        where id=#{ORG_MBR_ID}
+    </update>
+    <select id="checkCouncilRegState" resultMap="membereg" parameterType="string">
+        select ID,NAME,SEX,BIRTH,JG,MZ,DP,SFZ,GZDH,PHONE,EMAIL,YZBM,LXDZ,ZHBYYX,SXZY,XL,CSZY,GZDW,KS,DWZW,JSZC,ISRDZX,JL,CREATETIME,HY_ID,COUNCIL_FLAG,LSSH_ERR_REASON 
+        from org_membereg where userid=#{_parameter} and flag='0' order by createtime desc
+    </select>
+    <select id="getMemberRegById" resultMap="membereg" parameterType="string">
+        select x.*,'个人申请' sqlx from org_membereg x where id=#{_parameter}
+    </select>
+    <select id="getGroupRegById" resultMap="groupreg" parameterType="map">
+        select t.*,'团体申请' sqlx from ORG_GROUPREG t where id=#{_parameter}
+    </select>
+    
+    <select id="getRegmbr" resultMap="membereg" parameterType="map">
+        select x.*,'个人会员申请' sqlx from org_membereg x where userid=#{USERID} order by CREATETIME desc
+    </select>
+    <select id="getReggrp" resultMap="groupreg" parameterType="map">
+        select t.*,'团体会员申请' sqlx from ORG_GROUPREG t where userid=#{USERID} order by CREATETIME desc
+    </select>
+    <select id="getCpyreg" resultMap="companyreg" parameterType="map">
+        select t.*,'企业会员申请' sqlx from ORG_COMPANY t where userid=#{USERID} order by CREATETIME desc
+    </select>
+    <select id="getCilreg" resultMap="membereg" parameterType="map">
+		select a.*,b.*,'理事会员申请' sqlx from (select org_mbr_id,createtime,flag from council_rec where userid=#{USERID}) a left join 
+		(select ID,NAME,SEX,BIRTH,JG,MZ,DP,SFZ,GZDH,PHONE,EMAIL,YZBM,LXDZ,ZHBYYX,SXZY,XL,CSZY,GZDW,KS,DWZW,JSZC,ISRDZX,JL,HY_ID from org_membereg where userid=#{USERID}) b
+		on a.org_mbr_id=b.id order by a.createtime desc
+    </select>
+    
+    <update id="changeUserNameById" parameterType="map">
+        update sys_user set USER_ALIAS=#{USER_ALIAS} where USER_ID=#{USER_ID}
+    </update>
+	
+	<update id="setMsgIsRead" parameterType="map">
+	    update user_msg set IS_READ='0' where id=#{ID}
+	</update>
+	
+	<select id="initMsgList" parameterType="map" resultType="java.util.HashMap">
+	    select * from user_msg where userid=#{USERID} and is_read='1' order by datetime desc
+	</select>
+	
+	<insert id="insertMemberRegForm" parameterType="map">
+	    insert into org_membereg(ID,NAME,SEX,BIRTH,JG,MZ,DP,SFZ,GZDH,PHONE,EMAIL,YZBM,LXDZ,ZHBYYX,SXZY,XL,CSZY,GZDW,KS,DWZW,JSZC
+		<if test="ISRDZX != null and ISRDZX != ''">
+			,ISRDZX
+		</if>
+				,JL,USERID,USERALIAS) values (
+			#{ID},#{NAME},#{SEX},#{BIRTH},#{JG},#{MZ},#{DP},#{SFZ},#{GZDH},#{PHONE},#{EMAIL},#{YZBM},#{LXDZ},#{ZHBYYX},#{SXZY},#{XL}
+			,#{CSZY},#{GZDW},#{KS},#{DWZW},#{JSZC}
+			<if test="ISRDZX != null and ISRDZX != ''">
+			,#{ISRDZX}
+		</if>
+				,#{JL},#{USERID},#{USERALIAS})
+	</insert>
+	
+	<insert id="insertGroupRegForm" parameterType="map">
+	    insert into org_groupreg(ID,DWMC,CLRQ,ZCZB,ZGRS,XXDZ,HYSL,DWWZ,CZ,FZJGSL,YZBM,FRXM,DH,SEX,PHONE,ZWZC,EMAIL,LXR,LXRDH,LXRSJ,JL,USERID,USERALIAS) values (
+#{ID},#{DWMC},#{CLRQ},#{ZCZB},#{ZGRS},#{XXDZ},#{HYSL},#{DWWZ},#{CZ},#{FZJGSL},#{YZBM},#{FRXM},#{DH},#{SEX},#{PHONE},#{ZWZC},#{EMAIL},#{LXR},#{LXRDH},#{LXRSJ},#{JL},#{USERID},#{USERALIAS})
+	</insert>
+    
+	<select id="getAllMsgList" resultType="java.util.HashMap" parameterType="map">
+		select * from user_msg where USERID=#{USERID} order by DATETIME desc
+	</select>
+	
+	<select id="getAllMsgListCount" resultType="int">
+	  	select count(1) from user_msg where USERID=#{USERID}
+	</select>
+	
+	<select id="getPhoneUserByPhone" resultType="int" parameterType="string">
+	  	select count(1) from sys_user where phone=#{_parameter}
+	</select>
+	
+	<update id="bindUserPhone" parameterType="map">
+	  	update sys_user set phone=#{PHONE} where USER_ID=#{USER_ID}
+	</update>
+	
+	<select id="checkCpyRegState" resultMap="companyreg" parameterType="string">
+	    select CPY_NAME_CN,CPY_NAME_EN,CPY_CREATE_TIME,CPY_GSZCH,CPY_TYPE,CPY_TYPE_OTHER,CPY_BELONG,CPY_BELONG_OTHER,CPY_ADDR,CPY_UB,
+			   FR_NAME,FR_ZW,FR_BGDH,FR_PHONE,LXR_NAME,LXR_ZW,LXR_BGDH,LXR_PHONE,LXR_EMAIL,JL,CREATETIME,FLAG,HY_ID,QYSH_ERR_REASON,CPY_ORGINAL_CTIME 
+		from ORG_COMPANY where USERID=#{_parameter} order by CREATETIME desc
+	</select>
+	
+	<select id="checkRegState" resultMap="membereg" parameterType="string">
+	    select NAME,SEX,BIRTH,JG,MZ,DP,SFZ,GZDH,PHONE,EMAIL,YZBM,LXDZ,ZHBYYX,SXZY,XL,CSZY,GZDW,KS,DWZW,JSZC,ISRDZX,JL,FLAG,FIRST_CREATETIME,HYSH_ERR_REASON from ORG_MEMBEREG where USERID=#{_parameter} order by FIRST_CREATETIME desc
+	</select>
+	
+	<select id="checkGroupRegState" resultMap="groupreg" parameterType="string">
+	    select DWMC,CLRQ,ZCZB,ZGRS,XXDZ,HYSL,DWWZ,CZ,FZJGSL,YZBM,FRXM,DH,SEX,PHONE,ZWZC,EMAIL,LXR,LXRDH,LXRSJ,JL,CREATETIME,FLAG,HY_ID,TTSH_ERR_REASON from ORG_GROUPREG where USERID=#{_parameter} order by createtime desc
+	</select>
+	
+	<insert id="insertCpyRegForm" parameterType="map">
+	    insert into org_company(ID,CPY_NAME_CN,CPY_NAME_EN,CPY_CREATE_TIME,CPY_GSZCH,CPY_TYPE,
+								<if test="CPY_TYPE_OTHER != null and CPY_TYPE_OTHER != ''">
+									CPY_TYPE_OTHER,
+								</if>
+								CPY_BELONG,CPY_ORGINAL_CTIME,
+								<if test="CPY_BELONG_OTHER != null and CPY_BELONG_OTHER != ''">
+									CPY_BELONG_OTHER,
+								</if>
+								CPY_ADDR,CPY_UB,FR_NAME,FR_ZW,FR_BGDH,FR_PHONE,LXR_NAME,LXR_ZW,LXR_BGDH,LXR_PHONE,LXR_EMAIL,JL,
+								CREATETIME,CREATETIME_CN,USERID,USERALIAS,FLAG,HAS_OPERATE) values (
+								#{ID},#{CPY_NAME_CN},#{CPY_NAME_EN},#{CPY_CREATE_TIME},#{CPY_GSZCH},#{CPY_TYPE},
+								<if test="CPY_TYPE_OTHER != null and CPY_TYPE_OTHER != ''">
+									#{CPY_TYPE_OTHER},
+								</if>
+								#{CPY_BELONG},#{CPY_ORGINAL_CTIME},
+								<if test="CPY_BELONG_OTHER != null and CPY_BELONG_OTHER != ''">
+									#{CPY_BELONG_OTHER},
+								</if>
+								#{CPY_ADDR},#{CPY_UB},#{FR_NAME},#{FR_ZW},#{FR_BGDH},#{FR_PHONE},#{LXR_NAME},#{LXR_ZW},#{LXR_BGDH},
+								#{LXR_PHONE},#{LXR_EMAIL},#{JL},#{CREATETIME},#{CREATETIME_CN},#{USERID},#{USERALIAS},'1','1')
+	</insert>
+</mapper> 

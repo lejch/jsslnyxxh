@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jsslnyxxh.app.repository.biz.HpwlmDao">
+    
+	<resultMap id="noteResult" type="java.util.HashMap">  
+	    <result property="ID" column="ID" />  
+	    <result property="TITLE" column="TITLE" jdbcType="VARCHAR" javaType = "java.lang.String" />  
+	    <result property="CONTENT"  column="CONTENT" jdbcType="CLOB" javaType = "java.lang.String" />
+	    <result property="DATETIME" column="DATETIME" jdbcType="VARCHAR" javaType = "java.lang.String" />
+	    <result property="IS_SHOWN" column="IS_SHOWN" jdbcType="VARCHAR" javaType = "java.lang.String" />
+	    <result property="CREATE_TIME" column="CREATE_TIME" jdbcType="VARCHAR" javaType = "java.lang.String" />
+	    <result property="CREATOR" column="CREATOR" jdbcType="VARCHAR" javaType = "java.lang.String" />
+	    <result property="ATTACHMENT"  column="ATTACHMENT" jdbcType="CLOB" javaType = "java.lang.String" />
+    </resultMap>
+    
+	<resultMap id="memberRegResult" type="java.util.HashMap">  
+	    <result property="ID" column="ID" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="NAME" column="NAME" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="SEX" column="SEX" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="BIRTH" column="BIRTH" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="JG" column="JG" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="MZ" column="MZ" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="DP" column="DP" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="SFZ" column="SFZ" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="GZDH" column="GZDH" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="PHONE" column="PHONE" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="EMAIL" column="EMAIL" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="YZBM" column="YZBM" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="LXDZ" column="LXDZ" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="ZHBYYX" column="ZHBYYX" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="SXZY" column="SXZY" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="XL" column="XL" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="XW" column="XW" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="CSZY" column="CSZY" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="GZDW" column="GZDW" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="KS" column="KS" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="DWZW" column="DWZW" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="JSZC" column="JSZC" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="XHZW" column="XHZW" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="ISRDZX" column="ISRDZX" jdbcType="VARCHAR" javaType="java.lang.String" />
+		<result property="JL" column="JL" jdbcType="CLOB" javaType ="java.lang.String" />
+		<result property="CREATETIME" column="CREATETIME" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </resultMap>
+    
+	<select id="initSearch" parameterType="map" resultType="java.util.HashMap">
+	    select ID,TITLE,DATETIME,TYPE from org_news where flag='0' and IS_PUBLISH='0' and title like #{VAL} order by CREATE_TIME desc
+	</select>
+	<select id="initSearchCount" resultType="int" parameterType="map">
+	  	select count(1) from org_news where flag='0' and IS_PUBLISH='0' and title like #{VAL}
+	</select>
+	
+	<insert id="insertAdvice" parameterType="map">
+	    insert into org_advice(ID,
+	    					   NAME,
+	    					   EMAIL,
+	    					   TITLE,
+							   CONTENT,
+							   <if test="LW != null and LW != ''">
+							   LINKWAY,
+							   </if>
+							   CREATETIME
+							   )
+				values (#{ID},
+				        #{NAME},
+				        #{EMAIL},
+				        #{TITLE},
+						#{ZW},
+						<if test="LW != null and LW != ''">
+						#{LW},
+						</if>
+						to_char(sysdate,'yyyy-MM-dd HH24:mi:ss')
+						)
+	</insert>
+    
+	<select id="initTopNavBar" resultType="java.util.HashMap">
+	    select * from org_menu where parent_id is not null and flag='0' order by to_number(ORDER_SORT)
+	</select>
+	
+	<select id="initModalInsideData" resultType="java.util.HashMap">
+	    <![CDATA[
+	    select * from 
+(select id,TITLE,DATETIME,type,row_number() over(partition by type order by type,create_time desc) sortno from
+(select * from org_news where flag='0' and IS_PUBLISH='0')) where sortno<9
+		]]>
+	</select>
+	
+	<select id="initImgsLoop" resultType="java.util.HashMap">
+	    <![CDATA[
+		select * from (select ID,TITLE,SET_HPIC_URI from org_news where IS_SET_HPIC='0' and flag='0' and IS_PUBLISH='0' order by CREATE_TIME desc) where rownum<6
+		]]>
+	</select>
+	<select id="initInfoList" resultType="java.util.HashMap">
+	    <![CDATA[
+		select * from (select ID,TITLE,DATETIME from org_news where is_shown='0' and flag='0' and IS_PUBLISH='0' order by CREATE_TIME desc) where rownum<4
+		]]>
+	</select>
+	
+	<select id="getHpNewsById" resultMap="noteResult" parameterType="map">
+		select * from org_news where flag='0' and id=#{ID}
+	</select>
+	
+	<select id="getOrgNews" resultType="java.util.HashMap" parameterType="map">
+		select ID,TITLE,DATETIME,QUICK_IMG,QUICK_DESC from org_news where flag='0' and IS_PUBLISH='0' and type=#{TYPE} order by CREATE_TIME desc
+	</select>
+	
+	<select id="getOrgNewsCount" resultType="int" parameterType="map">
+	  	select count(1) from org_news where flag='0' and IS_PUBLISH='0' and type=#{TYPE}
+	</select>
+	
+	<select id="getXhFiles" resultType="java.util.HashMap" parameterType="map">
+		select * from xh_file where flag='0' order by addtime desc
+	</select>
+	
+	<select id="getXhFilesCount" resultType="int">
+	  	select count(1) from xh_file where flag='0'
+	</select>
+	
+	<select id="getDownloadList" resultType="java.util.HashMap" parameterType="map">
+		select * from org_download where flag='0' order by addtime desc
+	</select>
+	
+	<select id="getDownloadListCount" resultType="int">
+	  	select count(1) from org_download where flag='0'
+	</select>
+	
+</mapper> 

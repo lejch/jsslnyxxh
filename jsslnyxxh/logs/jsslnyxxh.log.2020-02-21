@@ -1,0 +1,112 @@
+2020-02-21 09:49:25,452 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} pool-connect
+2020-02-21 09:49:25,454 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120014} created. select * from org_menu where parent_id is not null and flag='0' order by to_number(ORDER_SORT)
+2020-02-21 09:49:25,454 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120014} Parameters : []
+2020-02-21 09:49:25,454 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120014} Types : []
+2020-02-21 09:49:25,469 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120014} executed. 15.479 millis. select * from org_menu where parent_id is not null and flag='0' order by to_number(ORDER_SORT)
+2020-02-21 09:49:25,470 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120014} clearParameters. 
+2020-02-21 09:49:25,471 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} commited
+2020-02-21 09:49:25,471 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} pool-recycle
+2020-02-21 09:49:25,505 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} pool-connect
+2020-02-21 09:49:25,505 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120015} created. select * from (select ID,TITLE,DATETIME from org_news where is_shown='0' and flag='0' and IS_PUBLISH='0' order by CREATE_TIME desc) where rownum<4
+2020-02-21 09:49:25,505 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120015} Parameters : []
+2020-02-21 09:49:25,505 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120015} Types : []
+2020-02-21 09:49:25,528 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120015} executed. 22.969 millis. select * from (select ID,TITLE,DATETIME from org_news where is_shown='0' and flag='0' and IS_PUBLISH='0' order by CREATE_TIME desc) where rownum<4
+2020-02-21 09:49:25,529 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120015} clearParameters. 
+2020-02-21 09:49:25,529 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} commited
+2020-02-21 09:49:25,529 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} pool-recycle
+2020-02-21 09:49:25,529 [http-8080-1] DEBUG [druid.sql.Connection] - {conn-110004} pool-connect
+2020-02-21 09:49:25,530 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} created. select * from 
+(select id,TITLE,DATETIME,type,row_number() over(partition by type order by type,create_time desc) sortno from
+(select * from org_news where flag='0' and IS_PUBLISH='0')) where sortno<9
+2020-02-21 09:49:25,530 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} Parameters : []
+2020-02-21 09:49:25,530 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} Types : []
+2020-02-21 09:49:25,540 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} executed. 10.58 millis. select * from 
+(select id,TITLE,DATETIME,type,row_number() over(partition by type order by type,create_time desc) sortno from
+(select * from org_news where flag='0' and IS_PUBLISH='0')) where sortno<9
+2020-02-21 09:49:25,546 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} clearParameters. 
+2020-02-21 09:49:25,547 [http-8080-1] DEBUG [druid.sql.Connection] - {conn-110004} commited
+2020-02-21 09:49:25,547 [http-8080-1] DEBUG [druid.sql.Connection] - {conn-110004} pool-recycle
+2020-02-21 09:49:25,549 [Druid-ConnectionPool-Create-1777608313] DEBUG [druid.sql.Connection] - {conn-110005} connected
+2020-02-21 09:49:25,549 [Druid-ConnectionPool-Create-1777608313] DEBUG [druid.sql.Connection] - {conn-110005} setAutoCommit false
+2020-02-21 09:49:25,550 [http-8080-1] DEBUG [druid.sql.Connection] - {conn-110004} pool-connect
+2020-02-21 09:49:25,550 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} created. select * from (select ID,TITLE,SET_HPIC_URI from org_news where IS_SET_HPIC='0' and flag='0' and IS_PUBLISH='0' order by CREATE_TIME desc) where rownum<6
+2020-02-21 09:49:25,550 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} Parameters : []
+2020-02-21 09:49:25,550 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} Types : []
+2020-02-21 09:49:25,554 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} executed. 3.931 millis. select * from (select ID,TITLE,SET_HPIC_URI from org_news where IS_SET_HPIC='0' and flag='0' and IS_PUBLISH='0' order by CREATE_TIME desc) where rownum<6
+2020-02-21 09:49:25,555 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} clearParameters. 
+2020-02-21 09:49:25,555 [http-8080-1] DEBUG [druid.sql.Connection] - {conn-110004} commited
+2020-02-21 09:49:25,555 [http-8080-1] DEBUG [druid.sql.Connection] - {conn-110004} pool-recycle
+2020-02-21 09:55:23,531 [Druid-ConnectionPool-Destory-1777608313] DEBUG [druid.sql.Connection] - {conn-110005} closed
+2020-02-21 10:04:31,777 [http-8080-1] DEBUG [druid.sql.Connection] - {conn-110004} pool-connect
+2020-02-21 10:04:31,778 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120018} created. select * from org_news where flag='0' and id=?
+2020-02-21 10:04:31,778 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120018} Parameters : [143f2335-871d-419f-be67-db30f9657cbb]
+2020-02-21 10:04:31,778 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120018} Types : [VARCHAR]
+2020-02-21 10:04:31,783 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120018} executed. 4.735 millis. select * from org_news where flag='0' and id=?
+2020-02-21 10:04:31,784 [http-8080-1] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120018} clearParameters. 
+2020-02-21 10:04:31,785 [http-8080-1] DEBUG [druid.sql.Connection] - {conn-110004} commited
+2020-02-21 10:04:31,785 [http-8080-1] DEBUG [druid.sql.Connection] - {conn-110004} pool-recycle
+2020-02-21 10:04:49,840 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} pool-connect
+2020-02-21 10:04:49,841 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120015} Parameters : []
+2020-02-21 10:04:49,841 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120015} Types : []
+2020-02-21 10:04:49,843 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120015} executed. 1.152 millis. select * from (select ID,TITLE,DATETIME from org_news where is_shown='0' and flag='0' and IS_PUBLISH='0' order by CREATE_TIME desc) where rownum<4
+2020-02-21 10:04:49,843 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120015} clearParameters. 
+2020-02-21 10:04:49,844 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} commited
+2020-02-21 10:04:49,844 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} pool-recycle
+2020-02-21 10:04:49,844 [http-8080-5] DEBUG [druid.sql.Connection] - {conn-110004} pool-connect
+2020-02-21 10:04:49,844 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} Parameters : []
+2020-02-21 10:04:49,844 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} Types : []
+2020-02-21 10:04:49,846 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} executed. 1.661 millis. select * from 
+(select id,TITLE,DATETIME,type,row_number() over(partition by type order by type,create_time desc) sortno from
+(select * from org_news where flag='0' and IS_PUBLISH='0')) where sortno<9
+2020-02-21 10:04:49,850 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} clearParameters. 
+2020-02-21 10:04:49,851 [http-8080-5] DEBUG [druid.sql.Connection] - {conn-110004} commited
+2020-02-21 10:04:49,851 [http-8080-5] DEBUG [druid.sql.Connection] - {conn-110004} pool-recycle
+2020-02-21 10:04:49,854 [http-8080-5] DEBUG [druid.sql.Connection] - {conn-110004} pool-connect
+2020-02-21 10:04:49,854 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} Parameters : []
+2020-02-21 10:04:49,854 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} Types : []
+2020-02-21 10:04:49,856 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} executed. 1.608 millis. select * from (select ID,TITLE,SET_HPIC_URI from org_news where IS_SET_HPIC='0' and flag='0' and IS_PUBLISH='0' order by CREATE_TIME desc) where rownum<6
+2020-02-21 10:04:49,856 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} clearParameters. 
+2020-02-21 10:04:49,857 [http-8080-5] DEBUG [druid.sql.Connection] - {conn-110004} commited
+2020-02-21 10:04:49,857 [http-8080-5] DEBUG [druid.sql.Connection] - {conn-110004} pool-recycle
+2020-02-21 10:04:49,864 [Druid-ConnectionPool-Create-1777608313] DEBUG [druid.sql.Connection] - {conn-110006} connected
+2020-02-21 10:04:49,864 [Druid-ConnectionPool-Create-1777608313] DEBUG [druid.sql.Connection] - {conn-110006} setAutoCommit false
+2020-02-21 10:04:52,682 [http-8080-5] DEBUG [druid.sql.Connection] - {conn-110006} pool-connect
+2020-02-21 10:04:52,682 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110006, pstmt-120019} created. select * from org_news where flag='0' and id=?
+2020-02-21 10:04:52,682 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110006, pstmt-120019} Parameters : [7d453a6a-d1ae-4d00-aefa-3d1cc0b50d87]
+2020-02-21 10:04:52,682 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110006, pstmt-120019} Types : [VARCHAR]
+2020-02-21 10:04:52,684 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110006, pstmt-120019} executed. 1.491 millis. select * from org_news where flag='0' and id=?
+2020-02-21 10:04:52,685 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110006, pstmt-120019} clearParameters. 
+2020-02-21 10:04:52,685 [http-8080-5] DEBUG [druid.sql.Connection] - {conn-110006} commited
+2020-02-21 10:04:52,685 [http-8080-5] DEBUG [druid.sql.Connection] - {conn-110006} pool-recycle
+2020-02-21 10:04:59,996 [http-8080-5] DEBUG [druid.sql.Connection] - {conn-110006} pool-connect
+2020-02-21 10:04:59,997 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110006, pstmt-120020} created. select * from (select ID,TITLE,DATETIME from org_news where is_shown='0' and flag='0' and IS_PUBLISH='0' order by CREATE_TIME desc) where rownum<4
+2020-02-21 10:04:59,997 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110006, pstmt-120020} Parameters : []
+2020-02-21 10:04:59,997 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110006, pstmt-120020} Types : []
+2020-02-21 10:04:59,997 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} pool-connect
+2020-02-21 10:04:59,997 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} Parameters : []
+2020-02-21 10:04:59,997 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} Types : []
+2020-02-21 10:04:59,999 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} executed. 1.43 millis. select * from 
+(select id,TITLE,DATETIME,type,row_number() over(partition by type order by type,create_time desc) sortno from
+(select * from org_news where flag='0' and IS_PUBLISH='0')) where sortno<9
+2020-02-21 10:04:59,999 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110006, pstmt-120020} executed. 2.131 millis. select * from (select ID,TITLE,DATETIME from org_news where is_shown='0' and flag='0' and IS_PUBLISH='0' order by CREATE_TIME desc) where rownum<4
+2020-02-21 10:04:59,999 [http-8080-5] DEBUG [druid.sql.Statement] - {conn-110006, pstmt-120020} clearParameters. 
+2020-02-21 10:05:00,000 [http-8080-5] DEBUG [druid.sql.Connection] - {conn-110006} commited
+2020-02-21 10:05:00,000 [http-8080-5] DEBUG [druid.sql.Connection] - {conn-110006} pool-recycle
+2020-02-21 10:05:00,003 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120016} clearParameters. 
+2020-02-21 10:05:00,003 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} commited
+2020-02-21 10:05:00,003 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} pool-recycle
+2020-02-21 10:05:00,006 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} pool-connect
+2020-02-21 10:05:00,006 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} Parameters : []
+2020-02-21 10:05:00,006 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} Types : []
+2020-02-21 10:05:00,007 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} executed. 0.559 millis. select * from (select ID,TITLE,SET_HPIC_URI from org_news where IS_SET_HPIC='0' and flag='0' and IS_PUBLISH='0' order by CREATE_TIME desc) where rownum<6
+2020-02-21 10:05:00,007 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120017} clearParameters. 
+2020-02-21 10:05:00,007 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} commited
+2020-02-21 10:05:00,008 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} pool-recycle
+2020-02-21 10:05:01,678 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} pool-connect
+2020-02-21 10:05:01,679 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120018} Parameters : [035aa1e6-c6be-47ab-9e6d-97dfff1e757c]
+2020-02-21 10:05:01,679 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120018} Types : [VARCHAR]
+2020-02-21 10:05:01,679 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120018} executed. 0.711 millis. select * from org_news where flag='0' and id=?
+2020-02-21 10:05:01,682 [http-8080-2] DEBUG [druid.sql.Statement] - {conn-110004, pstmt-120018} clearParameters. 
+2020-02-21 10:05:01,683 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} commited
+2020-02-21 10:05:01,683 [http-8080-2] DEBUG [druid.sql.Connection] - {conn-110004} pool-recycle
+2020-02-21 10:10:23,558 [Druid-ConnectionPool-Destory-1777608313] DEBUG [druid.sql.Connection] - {conn-110006} closed

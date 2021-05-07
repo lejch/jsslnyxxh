@@ -1,0 +1,10 @@
+2018-12-19 14:23:01,233 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110005, pstmt-120034} closed
+2018-12-19 14:23:01,236 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110005, pstmt-120033} closed
+2018-12-19 14:23:01,236 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110005, pstmt-120035} closed
+2018-12-19 14:23:01,237 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110005, pstmt-120042} closed
+2018-12-19 14:23:01,237 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110005, pstmt-120043} closed
+2018-12-19 14:23:01,237 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110005, pstmt-120047} closed
+2018-12-19 14:23:01,237 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110005, pstmt-120048} closed
+2018-12-19 14:23:01,237 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110005, pstmt-120049} closed
+2018-12-19 14:23:01,237 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110005, pstmt-120050} closed
+2018-12-19 14:23:01,238 [Thread-7] DEBUG [druid.sql.Statement] - {conn-110005, pstmt-120051} closed
